@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="table">
+            <h2>Tables</h2>
+            <input type="text" id="table-search" placeholder="Search table">
+            <div class="table-list">
+                <div class="table-item" id="Table-1" onclick="showOrderDetails('Table-1')" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <p>Table-1</p>
+                    <p><span>Rs.0 | Total items: 0</span></p>
+                </div>
+                <div class="table-item" id="Table-2"  onclick="showOrderDetails('Table-2')" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <p>Table-2</p>
+                    <p><span>Rs.0 | Total items: 0</span></p>
+                </div>
+                <div class="table-item" id="Table-3" onclick="showOrderDetails('Table-3')"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <p>Table-3</p>
+                    <p><span>Rs.0 | Total items: 0</span></p>
+                </div>
+                <div class="table-item" id="Table-4" onclick="showOrderDetails('Table-4')" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <p>Table-4</p>
+                    <p><span>Rs.0 | Total items: 0</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <h2>Menu</h2>
+            <input type="text" id="menu-search" placeholder="Search menu... by course, by food">
+            <div class="menu-list">
+                <div class="menu-item" data-course="Appetizer" draggable="true" ondragstart="drag(event)" data-item="Crusty Garlic Focaccia with Melted Cheese" data-price="105">
+                    <p>Crusty Garlic Focaccia with Melted Cheese</p>
+                    <p><span>105.00</span></p>
+                </div>
+                <div class="menu-item" data-course="entree" draggable="true" ondragstart="drag(event)" data-item="French Fries" data-price="120">
+                    <p>French Fries</p>
+                    <p><span>120.00</span></p>
+                </div>
+                <div class="menu-item" data-course="Desserts" draggable="true" ondragstart="drag(event)" data-item="Apricot Delight" data-price="200">
+                    <p>Apricot Delight</p>
+                    <p><span>200.00</span></p>
+                </div>
+                <div class="menu-item" data-course="Appetizer" draggable="true" ondragstart="drag(event)" data-item="Home Country Fries with Herbs & Chilli Flakes" data-price="105">
+                    <p>Home Country Fries with Herbs & Chilli Flakes</p>
+                    <p><span>105.00</span></p>
+                </div>
+                <div class="menu-item" data-course="main course" draggable="true" ondragstart="drag(event)" data-item="Grilled Pizza" data-price="299">
+                    <p>Grilled Pizza</p>
+                    <p><span>299.00</span></p>
+                </div>
+                <div class="menu-item" data-course="staters" draggable="true" ondragstart="drag(event)" data-item="French Fries with Cheese & Jalapenos" data-price="135">
+                    <p>French Fries with Cheese & Jalapenos</p>
+                    <p><span>135.00</span></p>
+                </div>
+                <div class="menu-item" data-course="main course" draggable="true" ondragstart="drag(event)" data-item="Chicken Biriyani" data-price="199">
+                    <p>Chicken Biriyani</p>
+                    <p><span>199.00</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <div id="modal-div">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-table-name">Table-1 | Order Details</h2>
+           </div>
+            <table id="order-details">
+            </table>
+            <div class="btn">
+                <button onclick="generateBill()">GENERATE BILL</button>
+                <button onclick="reset()">Reset</button>
+            </div>
+        </div>
+    </div>
+    <div class="bill">
+        <div id="bill-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeBillModal()">&times;</span>
+                <h2 id="bill-table-name"></h2>
+                <div id="bill-details"></div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.table {
+    width: 25%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    border: 1px solid black;
+}
+
+.table h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.table input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.table-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.table-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #dad0d0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.table-item p {
+    margin: 5px 0;
+}
+.table-item span {
+    font-size: small;
+}
+.table-item:hover {
+    transform: scale(1.01);
+}
+.table-item:active{
+    background-color: #888;
+}
+.menu {
+    width: 75%;
+    padding: 20px;
+    overflow-y: auto;
+    border: 1px solid black;
+}
+
+.menu h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.menu input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-item p {
+    margin: 5px 0;
+}
+.menu-item span {
+    font-size: small;
+}
+.menu-item:hover {
+    transform: scale(1.01);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 40px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.btn{
+    margin-top: 20px;
+}
+#modal-div{
+    margin:0px;
+    padding-left: 2px;
+    padding-right: 5px;
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.close {
+    color: #141313;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+.bill .modal-content{
+    border: 3px solid black;
+    height: 40vh;
+}
